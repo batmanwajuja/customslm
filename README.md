@@ -1,0 +1,51 @@
+cyber_model1/
+├── agent/            # Core agent logic
+│   ├── agent.py            # Main loop
+│   ├── monitor.py          # Watches Suricata logs
+│   ├── responder.py        # Blocks IPs, starts honeypots
+│   ├── honeypots.py        # Deploys fake SSH/netcat traps
+│
+├── model/            # ML model code
+│   ├── tiny_model.py       # The PyTorch model itself
+│   ├── load_model.py       # Loads model + vocab for inference
+│   ├── train.py            # (Optional) retraining script
+│
+├── rules/            # Symbolic rule system
+│   └── rules.py             # Overrides or enhances ML decisions
+│
+├── utils/            # Helpers
+│   ├── parser.py           # Tokenizer + vectorizer for logs
+│   └── linux_cmds.py       # Interfaces with iptables / ufw
+│
+├── trained/          # Your trained model lives here
+│   └── model.pt            # Output of training
+│
+├── logs/             # Runtime logs
+│   └── activity.log        # What the agent sees and does
+│
+├── data/             # Raw or cleaned training datasets (optional)
+│   └── logs_nadw.jsonl     # Example dataset
+│
+├── dashboard/        # Web UI
+│   ├── app.py              # Flask server
+│   └── templates/
+│       └── index.html      # Frontend HTML with log output
+│
+└── README.md         # Project documentation
+
+# 🔐 Cyber_Model1: Hybrid AI Firewall
+
+A CPU-optimized real-time AI defense agent for Linux networks.
+
+## Features
+
+- AI + symbolic rules for security decisions
+- Monitors Suricata logs
+- Blocks IPs using iptables or ufw
+- Deploys honeypots
+- Dashboard for live log viewing
+
+## Run
+
+```bash
+sudo python3 agent/agent.py
