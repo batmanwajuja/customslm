@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 cyber_model1/
 ├── agent/            # Core agent logic
 │   ├── agent.py            # Main loop
@@ -49,3 +50,6 @@ A CPU-optimized real-time AI defense agent for Linux networks.
 
 ```bash
 sudo python3 agent/agent.py
+=======
+# customslm
+>>>>>>> 18fa821715cf6b97c50a63c687f57de39c700760
